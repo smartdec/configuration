@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+# {{ ansible_managed }}
+
+{% for name,value in forum_localdev_env.items() %}
+{% if value %}
+export {{ name }}="{{ value }}"
+{% endif %}
+{% endfor %}
+
+cd $HOME/cs_comments_service

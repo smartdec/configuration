@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+# {{ ansible_managed }}
+
+{% for name,value in edxapp_localdev_env.items() %}
+{% if value %}
+export {{ name }}="{{ value }}"
+{% endif %}
+{% endfor %}
+
+cd $HOME/edx-platform

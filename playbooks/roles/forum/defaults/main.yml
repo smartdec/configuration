@@ -11,6 +11,8 @@ forum_gem_root: "{{ forum_rbenv_dir }}/.gem"
 forum_gem_bin: "{{ forum_gem_root }}/bin"
 forum_path: "{{ forum_code_dir }}/bin:{{ forum_rbenv_bin }}:{{ forum_rbenv_shims }}:{{ forum_gem_bin }}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
+forum_autostart: True
+
 forum_environment:
   RBENV_ROOT: "{{ forum_rbenv_root }}"
   GEM_HOME: "{{ forum_gem_root }}"

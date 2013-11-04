@@ -115,7 +115,7 @@
   environment: "{{ rbenv_environment }}"
 
 - name: rbenv | remove rbenv version of rake
-  file: path="{{ rbenv_dir }}/.rbenv/versions/1.9.3-p374/bin/rake" state=absent
+  file: path="{{ rbenv_dir }}/.rbenv/versions/{{ rbenv_ruby_version }}/bin/rake" state=absent
 
 - name: rbenv | install rake gem
   shell: "gem install rake -v {{ rbenv_rake_version }}"
