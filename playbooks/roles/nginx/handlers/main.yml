@@ -1,6 +1,8 @@
 ---
 - name: nginx | restart nginx
   service: name=nginx state=restarted
+  when: not nginx_disable
 
 - name: nginx | reload nginx
   service: name=nginx state=reloaded
+  when: not nginx_disable

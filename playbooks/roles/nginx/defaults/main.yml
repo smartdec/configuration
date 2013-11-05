@@ -40,3 +40,7 @@ nginx_cfg:
   # this value can be overiden in vars/secure/<group>.yml
   htpasswd: |
     edx:$apr1$2gWcIvlc$Nu7b/KTwd5HoIDEkSPNUk/
+
+# Disable nginx from starting automatically
+# Useful for local development
+nginx_disable: False

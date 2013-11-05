@@ -37,6 +37,7 @@
 - name: edxapp | git clean after checking out edx-platform
   shell: cd {{edxapp_code_dir}} && git clean -xdf
   sudo_user: "{{ edxapp_user }}"
+  when: not edxapp_skip_clean
   tags: deploy
 
 - name: edxapp | checkout theme

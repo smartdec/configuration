@@ -415,3 +415,7 @@ edxapp_cms_variant: cms
 
 # Worker Settings
 worker_django_settings_module: 'aws'
+
+# Skip the git clean when deploying
+# Useful to avoid losing work in local dev
+edxapp_skip_clean: False
