@@ -12,11 +12,11 @@
 # Defaults specified here should not contain
 # any secrets or host identifying information.
 
-EDXAPP_LMS_BASE: ''
+EDXAPP_LMS_BASE: 'edu.olimpiada.ru'
 EDXAPP_PREVIEW_LMS_BASE: ''
-EDXAPP_CMS_BASE: ''
-EDXAPP_AWS_ACCESS_KEY_ID:  ''
-EDXAPP_AWS_SECRET_ACCESS_KEY:  ''
+EDXAPP_CMS_BASE: 'edu.olimpiada.ru/studio'
+EDXAPP_AWS_ACCESS_KEY_ID:  'AKIAIIID4OZFJCARBZFQQ'
+EDXAPP_AWS_SECRET_ACCESS_KEY:  'QOylu99bVhcjst6NQdhm0frCi4cHvUDpgHQ+a6mXX'
 EDXAPP_XQUEUE_BASIC_AUTH: [ 'edx', 'edx' ]
 EDXAPP_XQUEUE_DJANGO_AUTH:
   username: 'lms'
@@ -76,7 +76,7 @@ EDXAPP_FEATURES:
   CERTIFICATES_ENABLED: true
   ENABLE_DISCUSSION_SERVICE: true
   ENABLE_INSTRUCTOR_ANALYTICS: true
-  SUBDOMAIN_BRANDING: false
+  SUBDOMAIN_BRANDING: true
   SUBDOMAIN_COURSE_LISTINGS: false
   PREVIEW_LMS_BASE: $EDXAPP_PREVIEW_LMS_BASE
   ENABLE_S3_GRADE_DOWNLOADS: true
@@ -509,10 +509,10 @@ edxapp_theme_source_repo: 'https://{{ COMMON_GIT_MIRROR }}/Stanford-Online/edx-t
 edxapp_theme_version: 'HEAD'
 
 # make this the public URL instead of writable
-edx_platform_repo: "https://{{ COMMON_GIT_MIRROR }}/edx/edx-platform.git"
+edx_platform_repo: "https://{{ COMMON_GIT_MIRROR }}/smartdec/edx-platform.git"
 # `edx_platform_version` can be anything that git recognizes as a commit
 # reference, including a tag, a branch name, or a commit hash
-edx_platform_version: 'release'
+edx_platform_version: 'select/release'
 local_requirements_file:  "{{ edxapp_code_dir }}/requirements/edx/local.txt"
 pre_requirements_file:    "{{ edxapp_code_dir }}/requirements/edx/pre.txt"
 post_requirements_file:   "{{ edxapp_code_dir }}/requirements/edx/post.txt"
